@@ -5,5 +5,6 @@ RUN yum install wget unzip -y
 RUN wget https://github.com/jianwei/docker/archive/master.zip
 RUN unzip master.zip
 RUN pip install  bottle
-RUN cd docker-master/sample/; python hello.py
+RUN cp docker-master/sample/hello.py ./
+CMD ["python","hellow.py"]
 
